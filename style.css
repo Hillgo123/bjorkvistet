@@ -1,0 +1,187 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    overflow-x: hidden;
+    font-size: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.title {
+    position: fixed;
+    background: #717f8e;
+    top: 0;
+    left: 0;
+    height: 10%;
+    width: 100%;
+    z-index: 999;
+}
+
+h1 {
+    position: relative;
+    left: 20%;
+    top: 5%;
+    font-size: 30px;
+    color: white;
+}
+
+.text {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    transform: translate(-50%, -50%);
+    top: 35vh;
+    left: 50%;
+}
+
+#quote {
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.images {
+    position: absolute;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    top: 65vh;
+    left: 0;
+}
+
+img {
+    max-width: inherit;
+    max-height: inherit;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.credit {
+    position: absolute;
+    top: 285vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+}
+
+.credit div {
+    margin: 20px;
+    padding: 0px 20px;
+    border-radius: 50px;
+}
+
+div[name="arkitekt"] {
+    background-color: #8f8990;
+}
+
+div[name="byggmästare"] {
+    background-color: #717f8e;
+}
+
+.container {
+    position: absolute;
+    top: 295vh;
+    left: 20%;
+    width: 60%;
+    font-size: 30px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.container div {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+}
+
+.container[name="floor"] {
+    top: 320vh;
+    left: 15%;
+    width: 70%;
+}
+
+.container[name="floor"] img {
+    height: auto;
+    width: 60vh;
+}
+
+h2 {
+    position: absolute;
+    font-weight: bold;
+    font-size: 40px;
+    transform: translate(-50%, -50%);
+    top: 360vh;
+    left: 50%;
+}
+
+.container[name="bergen"] {
+    top: 375vh;
+}
+
+.container[name="images row 1"] {
+    left: 12.5%;
+    width: 75%;
+    top: 405vh;
+    height: 30vh;
+}
+
+.container[name="images row 2"] {
+    left: 12.5%;
+    width: 75%;
+    top: 442vh;
+    height: 30vh;
+}
+
+.container[name="images row 1"] img,
+.container[name="images row 2"] img {
+    overflow: hidden;
+    border-radius: 10px;
+    width: 30vh;
+}
+
+.rent {
+    position: absolute;
+    left: 12.5%;
+    top: 485vh;
+}
+
+h3 {
+    font-weight: bold;
+    font-size: 40px;
+}
+
+
+.footer {
+    position: absolute;
+    top: 520vh;
+    background: #3b3b44;
+    color: #9ba5a0;
+    width: 100%;
+    height: 30vh;
+
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+}
+
+h4 {
+    color: white;
+    font-size: 30px;
+}
