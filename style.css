@@ -4,6 +4,7 @@ body {
     display: flex;
     overflow-x: hidden;
     font-size: 20px;
+    font: Cormorant SemiBold;
 }
 
 a {
@@ -25,7 +26,7 @@ h1 {
     position: relative;
     left: 20%;
     top: 5%;
-    font-size: 30px;
+    font-size: 40px;
     color: white;
 }
 
@@ -39,23 +40,32 @@ h1 {
     transform: translate(-50%, -50%);
     top: 35vh;
     left: 50%;
+    width: 70%
 }
 
-#quote {
+.text p:nth-child(1) {
     font-weight: bold;
     font-size: 40px;
 }
 
 .images {
     position: absolute;
-    overflow: hidden;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     text-align: center;
     align-items: center;
     align-content: center;
-    top: 65vh;
+    top: 55vh;
     left: 0;
+}
+
+.images img {
+    margin: 50px 0;
+}
+
+img[name="house"] {
+    width: 60%;
+    border-radius: 15px;
 }
 
 img {
@@ -68,7 +78,7 @@ img {
 
 .credit {
     position: absolute;
-    top: 285vh;
+    top: 300vh;
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
@@ -85,15 +95,32 @@ img {
 
 div[name="arkitekt"] {
     background-color: #8f8990;
+    transition: 0.5s;
 }
 
 div[name="byggmästare"] {
+    transition: 0.5s;
     background-color: #717f8e;
+}
+
+div[name="arkitekt"]:hover,
+div[name="byggmästare"]:hover {
+    text-decoration: underline;
+    transform: scale(1.2);
+}
+
+h2 {
+    position: absolute;
+    font-weight: bold;
+    font-size: 40px;
+    transform: translate(-50%, -50%);
+    top: 375vh;
+    left: 50%;
 }
 
 .container {
     position: absolute;
-    top: 295vh;
+    top: 310vh;
     left: 20%;
     width: 60%;
     font-size: 30px;
@@ -110,54 +137,79 @@ div[name="byggmästare"] {
 }
 
 .container[name="floor"] {
-    top: 320vh;
-    left: 15%;
-    width: 70%;
+    top: 335vh;
+    left: 10%;
+    width: 80%;
 }
 
 .container[name="floor"] img {
     height: auto;
+    transition: 0.5s;
     width: 60vh;
 }
 
-h2 {
-    position: absolute;
-    font-weight: bold;
-    font-size: 40px;
-    transform: translate(-50%, -50%);
-    top: 360vh;
-    left: 50%;
+.container[name="floor"] img:hover {
+    transform: scale(1.3);
 }
 
-.container[name="bergen"] {
-    top: 375vh;
+.container[name="info_2"] {
+    top: 390vh;
 }
 
 .container[name="images row 1"] {
-    left: 12.5%;
-    width: 75%;
-    top: 405vh;
-    height: 30vh;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
 .container[name="images row 2"] {
     left: 12.5%;
     width: 75%;
-    top: 442vh;
+    top: 420vh;
     height: 30vh;
 }
 
-.container[name="images row 1"] img,
-.container[name="images row 2"] img {
+.container[name="images row 3"] {
+    left: 12.5%;
+    width: 75%;
+    top: 457vh;
+    height: 30vh;
+}
+
+.container[name="images row 1"] img {
     overflow: hidden;
     border-radius: 10px;
+    transition: 0.5s;
+    width: 50vh;
+}
+
+.container[name="images row 2"] img,
+.container[name="images row 3"] img {
+    overflow: hidden;
+    border-radius: 10px;
+    transition: 0.5s;
     width: 30vh;
+}
+
+.container[name="images row 1"] img:hover {
+    transform: scale(1.2);
+}
+
+.container[name="images row 1"] img:nth-child(n + 2):hover {
+    width: 60vh;
+}
+
+.container[name="images row 2"] img:hover,
+.container[name="images row 3"] img:hover {
+    transform: scale(1.1);
+    width: 40vh;
 }
 
 .rent {
     position: absolute;
     left: 12.5%;
-    top: 485vh;
+    top: 500vh;
 }
 
 h3 {
@@ -168,13 +220,13 @@ h3 {
 
 .footer {
     position: absolute;
-    top: 520vh;
+    top: 540vh;
     background: #3b3b44;
     color: #9ba5a0;
     width: 100%;
     height: 30vh;
 
-    display:flex;
+    display: flex;
     flex-direction: column;
     text-align: center;
     align-items: center;
@@ -183,5 +235,384 @@ h3 {
 
 h4 {
     color: white;
-    font-size: 30px;
+    font-size: 40px;
+}
+
+
+@media (max-width: 1750px) {
+    .text {
+        width: 70%;
+    }
+
+    .container[name="images row 1"] img {
+        width: 35vh;
+    }
+
+    .container[name="images row 1"] img:nth-child(n + 2):hover {
+        width: 45vh;
+    }
+
+    .credit {
+        top: 252vh;
+    }
+
+    .container {
+        top: 262vh;
+    }
+
+    .container[name="floor"] {
+        top: 290vh;
+    }
+
+    h2 {
+        top: 330vh;
+    }
+
+    .container[name="info_2"] {
+        top: 340vh;
+    }
+
+    .container[name="images row 2"], .container[name="images row 3"] {
+        left: 10%;
+        width: 80%;
+    }
+
+    .container[name="images row 2"] {
+        top: 365vh
+    }
+
+    .container[name="images row 3"] {
+        top: 399vh
+    }
+
+    .rent {
+        top: 435vh;
+    }
+
+    .footer {
+        top: 470vh;
+    }
+}
+
+@media (max-width: 1250px) {
+    body {
+        font-size: 20px;
+    }
+
+    .text {
+        top: 27vh;
+    }
+
+    .text p:nth-child(1) {
+        font-weight: bold;
+        font-size: 30px;
+    }
+
+    .container[name="images row 1"] {
+        top: -15vh;
+    }
+
+    .container[name="images row 1"] img {
+        width: 25vh;
+    }
+
+    .container[name="images row 1"] img:nth-child(n + 2):hover {
+        width: 35vh;
+    }
+
+    .images img {
+        top: 5vh;
+    }
+
+    .images img[name="map"] {
+        margin-top: -150px;
+        margin-bottom: 20px;
+    }
+
+    .credit {
+        top: 180vh;
+    }
+
+    .container {
+        top: 186vh
+    }
+
+    .container[name="floor"] {
+        top: 210vh;
+    }
+
+    .container[name="floor"] img {
+        width: 40vh;
+    }
+
+    h2 {
+        top: 236vh;
+    }
+
+    .container[name="info_2"] {
+        top: 245vh;
+        left: 10%;
+        width: 80%;
+    }
+
+    .container[name="images row 2"], .container[name="images row 3"] {
+        left: 5%;
+        width: 90%;
+    }
+
+    .container[name="images row 2"] img, .container[name="images row 3"] img{
+        width: 25vh;
+        height: 25vh;
+    }
+
+    .container[name="images row 2"] {
+        top: 270vh
+    }
+
+    .container[name="images row 3"] {
+        top: 297vh
+    }
+
+    .rent {
+        top: 330vh;
+    }
+
+    .footer {
+        top: 365vh;
+        height: 25vh;
+    }
+}
+
+@media (max-width: 880px) {
+    body {
+        font-size: 17.5px;
+    }
+
+    .title {
+        height: 8%;
+    }
+
+    h1 {
+        transform: translate(-50%, -50%);
+        top: 2vh;
+        left: 90%;
+        font-size: 30px;
+    }
+
+    .text {
+        width: 90%;
+        top: 25vh;
+    }
+
+    .container[name="images row 1"] {
+        top: -20vh;
+    }
+
+    .container[name="images row 1"] img {
+        width: 15vh;
+    }
+
+    .container[name="images row 1"] img:nth-child(n + 2):hover {
+        width: 20vh;
+    }
+
+    .images img[name="house"] {
+        width: 80%;
+    }
+
+    .credit {
+        top: 155vh;
+    }
+
+    .credit div {
+        transform: scale(1.1);
+    }
+
+    .credit div:hover {
+        transform: scale(1.3);
+    }
+
+    .container {
+        left: 0;
+        width: 100%;
+        top: 164vh;
+        font-size: 20;
+    }
+
+    .container[name="floor"] {
+        top: 190vh;
+        left: 5%;
+        width: 90%;
+    }
+
+    .container[name="floor"] img {
+        width: 35vh;
+    }
+
+    h2 {
+        top: 216vh;
+    }
+
+    .container[name="info_2"] {
+        top: 225vh;
+        left: 0;
+        width: 100%;
+        font-size: 25px;
+    }
+
+    .container[name="images row 2"], .container[name="images row 3"] {
+        left: 1%;
+        width: 98%;
+    }
+
+    .container[name="images row 2"] img, .container[name="images row 3"] img{
+        width: 20vh;
+        height: 20vh;
+    }
+
+    .container[name="images row 2"] {
+        top: 245vh
+    }
+
+    .container[name="images row 3"] {
+        top: 266vh
+    }
+
+    .rent {
+        top: 305vh;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        align-content: center;
+    }
+
+    .footer {
+        top: 327vh;
+        height: 20vh;
+    }
+
+    h4 {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 530px) {
+    body {
+        font-size: 15px;
+    }
+
+    .title {
+        height: 6%;
+    }
+
+    h1 {
+        transform: translate(-50%, -50%);
+        top: 1.5vh;
+        font-size: 20px;
+    }
+
+    .text {
+        top: 20vh;
+        width: 90%;
+    }
+
+    .text p:nth-child(1) {
+        font-weight: bold;
+        font-size: 25px;
+    }
+
+    .container[name="images row 1"] {
+        top: -25vh;
+    }
+
+    .container[name="images row 1"] img {
+        width: 10vh;
+    }
+
+    .container[name="images row 1"] img:nth-child(n + 2):hover {
+        width: 12.5vh;
+    }
+
+    .images img[name="map"] {
+        margin-top: -250px;
+        margin-bottom: 10px;
+    }
+
+    .images img[name="house"] {
+        width: 80%;
+    }
+
+    .credit {
+        top: 107vh;
+    }
+
+    .credit div {
+        transform: scale(1);
+    }
+
+    .credit div:hover {
+        transform: scale(1.2);
+    }
+
+    .container[name="info_1"] {
+        font-size: 15px;
+        top: 114vh;
+    }
+
+    .container[name="floor"] {
+        top: 129vh;
+        left: 0;
+        width: 100%;
+    }
+
+    .container[name="floor"] img {
+        width: 20vh;
+    }
+
+    h2 {
+        top: 146vh;
+        font-size: 20px;
+    }
+
+    .container[name="info_2"] {
+        top: 153vh;
+        left: 0;
+        width: 100%;
+        font-size: 15px;
+    }
+
+    .container[name="images row 2"], .container[name="images row 3"] {
+        left: 0.5%;
+        width: 99%;
+    }
+
+    .container[name="images row 2"] img, .container[name="images row 3"] img{
+        width: 12.5vh;
+        height: 12.5vh;
+    }
+
+    .container[name="images row 2"] {
+        top: 167vh
+    }
+
+    .container[name="images row 3"] {
+        top: 180vh
+    }
+
+    .rent {
+        top: 210vh;
+        width: 50vh;
+    }
+
+    .footer {
+        top: 230vh;
+        height: 17vh;
+    }
+
+    h4 {
+        font-size: 30px;
+    }
 }
